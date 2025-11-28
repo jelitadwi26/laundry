@@ -30,6 +30,8 @@ $jumlah_pakaian = $_POST['jumlah_pakaian'];
 for($x=0; $x<count($jenis_pakaian); $x++){
     if($jenis_pakaian[$x] != ""){
         mysqli_query($koneksi, "insert into pakaian values('', '$sid_terakhir', '$jenis_pakaian[$x]', '$jumlah_pakaian[$x]')");
+
+        echo "<script>alert('Data telah diubah'); window.location.href='pelanggan.php'</script";
     }
 }
 
